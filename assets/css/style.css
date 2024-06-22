@@ -1,0 +1,15 @@
+header {
+  background-color: green;
+}
+header h1 {
+  color: blue;
+}
+
+main section {
+  background-color: yellow;
+}
+main section h2 {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
