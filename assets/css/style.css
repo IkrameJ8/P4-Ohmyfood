@@ -51,7 +51,7 @@ body .presentation-main-container p {
 }
 body .presentation-main-container .btn-primary {
   border-radius: 35px;
-  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   padding: 20px;
   color: white;
   text-decoration: none;
@@ -62,12 +62,11 @@ body .presentation-main-container h1 {
   margin-left: 75px;
   margin-right: 75px;
 }
-body .fonctionnement-main-container .title-section {
+body .presentation-main-container .fonctionnement-main-container .title-section {
   margin-top: 35px;
-  padding-left: 10px;
 }
-body .fonctionnement-main-container {
-  padding: 30px;
+body .presentation-main-container .fonctionnement-main-container {
+  padding: 15px;
 }
 body .fonctionnement {
   display: flex;
@@ -76,13 +75,21 @@ body .fonctionnement {
   border-radius: 20px;
   background-color: #f8f8f8;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 0 25px 35px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+body .fonctionnement-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 35px;
+  gap: 30px;
 }
 body .fonctionnement article {
   display: flex;
   align-items: center;
 }
-body .fa-solid {
+body .function {
   color: #7e7e7e;
 }
 body .btn-second-number {
@@ -105,12 +112,14 @@ body h3 {
 }
 body .restaurant-main-container {
   background-color: #f8f8f8;
-  padding: 15px;
   margin-top: 80px;
+  padding: 15px;
+}
+body .fonctionnement-main-container {
+  padding: 15px;
 }
 body .restaurant-title {
   margin-top: 35px;
-  padding-left: 10px;
 }
 body .restaurant-list {
   display: flex;
@@ -168,7 +177,7 @@ body .hide {
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
-  color: #9356DC;
+  background: linear-gradient(top, #9356DC, #FF79DA);
 }
 
 .hide:hover {
@@ -186,33 +195,84 @@ body .hide {
   font-weight: bold;
 }
 
-@media (min-width: 1024px) {
-  .presentation-main-container h1 {
+@media (min-width: 600px) {
+  body .presentation-main-container h1 {
     font-size: 40px;
   }
-  .presentation-main-container p {
+  body .presentation-main-container p {
     margin-top: 35px;
     margin-bottom: 35px;
   }
-  .fonctionnement-list {
-    display: flex;
+  body .fonctionnement-main-container {
+    padding: 30px;
+  }
+  body .fonctionnement-list {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 35px;
+    gap: 30px;
   }
-  .fonctionnement {
+  body .fonctionnement {
     width: 33%;
   }
-  .restaurant-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    width: 90%;
+  body .background-restaurant {
+    background-color: #f8f8f8;
   }
-  .restaurant-list {
-    margin-right: 55px;
-    margin-left: 55px;
+  body .restaurant-main-container {
+    padding: 30px;
+  }
+  body .restaurant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+  }
+  body .restaurant-list {
     margin-bottom: -15px;
+    width: calc(50% - 50px);
+  }
+}
+@media (min-width: 1024px) {
+  body .presentation-main-container h1 {
+    font-size: 40px;
+  }
+  body .presentation-main-container p {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  body .fonctionnement-main-container {
+    padding: 30px;
+    margin-left: 105px;
+    margin-right: 105px;
+  }
+  body .fonctionnement-list {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 35px;
+    gap: 30px;
+  }
+  body .fonctionnement {
+    width: 33%;
+  }
+  body .background-restaurant {
+    background-color: #f8f8f8;
+  }
+  body .restaurant-main-container {
+    padding: 30px;
+    margin-left: 105px;
+    margin-right: 105px;
+  }
+  body .restaurant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+  }
+  body .restaurant-list {
+    margin-bottom: -15px;
+    width: calc(50% - 50px);
   }
 }
 .footer {
@@ -255,6 +315,32 @@ body .hide {
   margin: 0;
 }
 
+@media (min-width: 600px) {
+  .footer_bloc {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .footer_logo {
+    display: none;
+  }
+  .footer_logo_res {
+    display: block;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 45px;
+    padding-top: 25px;
+  }
+  .footer_nav, .footer_nav-info {
+    margin-left: 15px;
+    padding-top: 35px;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    margin-right: 35px;
+  }
+}
 @media (min-width: 1024px) {
   .footer_bloc {
     display: flex;
@@ -281,6 +367,14 @@ body .hide {
     margin-right: 35px;
   }
 }
+.fa-arrow-left {
+  position: absolute;
+  left: 25px;
+  top: 30px;
+  color: black;
+  font-size: larger;
+}
+
 .page_restaurant-img {
   position: relative;
   z-index: -1;
@@ -303,22 +397,27 @@ body .hide {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  position: relative;
+  gap: 30px;
+  margin-bottom: -25px;
+}
+
+.card-like {
+  position: relative;
+  top: 0;
+  height: 20px;
+}
+
+.like {
+  position: absolute;
+  top: -5px;
+  font-size: 25px;
+  margin-left: -35px;
 }
 
 .menu_heading h1 {
-  margin: 0;
   font-family: "shrikhand";
-  font-size: 24px;
-}
-
-.button__like {
-  background: none;
-  border: none;
-  font-size: 20px;
-}
-
-.button__like i {
-  color: #000;
+  font-size: 30px;
 }
 
 .menu_container {
@@ -339,9 +438,41 @@ body .hide {
   border-radius: 15px;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
   margin-bottom: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 76px;
+}
+
+.menu-cards_price {
+  display: flex;
+  align-items: end;
+}
+
+.menu-cards:hover .price_container {
+  transform: translateX(-10px);
+}
+
+.price_container {
+  display: flex;
+  right: 0;
+  transform: translateX(60px);
+  gap: 20px;
+  transition: transform 0.5s linear;
+  height: 100%;
+}
+
+.checkmark {
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 60px;
+}
+.checkmark .fa-circle-check {
+  color: white;
 }
 
 .menu-cards_info {
@@ -349,22 +480,30 @@ body .hide {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
+  padding-left: 10px;
 }
 
 .menu-cards_description {
-  flex-grow: 1;
+  width: 70%;
 }
 
 .menu-cards_description h4 {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-cards_description p {
   margin: 5px 0 0;
   font-size: 14px;
   color: #777;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-cards_price {
@@ -376,11 +515,12 @@ body .hide {
   font-size: 16px;
   font-weight: bold;
   color: #333;
+  margin-bottom: 10px;
 }
 
 .orderbtn {
   border-radius: 35px;
-  background: linear-gradient(193.33deg, rgb(147, 86, 220) -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   padding: 20px;
   justify-content: center;
   text-align: center;
@@ -396,13 +536,55 @@ body .hide {
   justify-content: center;
 }
 
+@media (min-width: 600px) {
+  .page_restaurant-img {
+    height: 300px;
+  }
+  .menu {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .menu-list {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .menu_heading {
+    display: flex;
+    justify-content: center;
+  }
+  .button__like {
+    margin-left: 25px;
+  }
+  .like {
+    margin-left: 15px;
+  }
+  .orderbtn {
+    width: 150px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+}
 @media (min-width: 1024px) {
   .page_restaurant-img {
-    height: 400px;
+    height: 300px;
   }
   .menu {
     margin-left: 150px;
     margin-right: 150px;
+  }
+  .menu-list {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  .menu_heading {
+    display: flex;
+    justify-content: center;
+  }
+  .button__like {
+    margin-left: 25px;
+  }
+  .like {
+    margin-left: 15px;
   }
   .orderbtn {
     width: 150px;

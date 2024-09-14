@@ -36,7 +36,32 @@
 .footer_nav p, .footer_nav-info p {
     margin: 0;
 }
-
+@media (min-width: 600px){
+    .footer_bloc{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        }
+        .footer_logo{
+            display: none;
+        }
+        .footer_logo_res{
+            display: block;
+            font-size: 20px;
+            margin-left: 100px;
+            margin-right: 45px;
+            padding-top: 25px;
+        }
+        .footer_nav, .footer_nav-info{
+            margin-left: 15px;
+            padding-top: 35px;
+        }
+        .footer-nav{
+            display: flex;
+            flex-direction: row;
+            margin-right: 35px;
+        }
+}
 @media (min-width: 1024px){
     .footer_bloc{
     display: flex;
@@ -62,5 +87,4 @@
         flex-direction: row;
         margin-right: 35px;
     }
-
 }
