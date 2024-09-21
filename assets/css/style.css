@@ -177,7 +177,9 @@ body .hide {
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 1;
-  background: linear-gradient(top, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hide:hover {
@@ -378,6 +380,8 @@ body .hide {
 .page_restaurant-img {
   position: relative;
   z-index: -1;
+  width: 100%;
+  height: 250px;
 }
 .page_restaurant-img img {
   width: 100%;
@@ -482,10 +486,16 @@ body .hide {
   width: 100%;
   height: 100%;
   padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-cards_description {
   width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-cards_description h4 {
@@ -508,6 +518,7 @@ body .hide {
 
 .menu-cards_price {
   text-align: right;
+  margin-right: 5px;
 }
 
 .menu-cards_price p {
